@@ -9,9 +9,18 @@ $(document).ready(function() {
     $('#submitbutton').click(submitEmail);
 
     function submitEmail(event) {
-        event.preventDefault();
-        // email info here!
-    }
+//        event.preventDefault();
+//        var data = {
+//            to: $('submitForm input[name="email"]'.val()),
+//            subject: $('submitForm input[name="subject"]'.val()),
+//            text: $('submitForm input[name="text"]'.val())
+//        }
+//        $.ajax('api/send', {
+//            'data': data,
+//            success: submitted,
+//            error: failed
+//        })
+//    }
 
     // shows the submitted thing for a bit
     function submitted() {

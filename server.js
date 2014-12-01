@@ -8,6 +8,7 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
+// var sendGrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
 //create an express application
 var app = express();
@@ -27,9 +28,21 @@ app.use(function(err, req, res, next) {
     res.status(err.statusCode || 500).json({message: err.message || err.toString()});
 });
 
+// REQUIRES SENDGRID ADDON FOR HEROKU, COMMENTED FOR THAT REASON
 app.get('/api/send', function (req, res){
-    // do something here
-});
+//    sendgrid.send({
+//        to: req.query.to,
+//        from: 'info343@ischool.uw.edu'
+//        subject: req.query.subject,
+//        text: req.query.text
+//    }, function(err, json) {
+//        if (err) {
+//            res.status(500).send('internal server error');
+//        } else {
+//            res.status(200).send('everything went okay, email sent');
+//        }
+//    })
+//});
 
 //start the web server
 var port = process.env.YOUR_PORT || process.env.PORT || 8080;

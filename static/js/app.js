@@ -20,7 +20,7 @@ $(document).ready(function() {
 //            success: submitted,
 //            error: failed
 //        })
-//    }
+    }
 
     // shows the submitted thing for a bit
     function submitted() {
